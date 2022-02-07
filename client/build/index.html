@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name=""viewport" content="width=device-width", intial-scale=1">
+    <title>Examen</title>
+<script>
+    const movieView=Handlebars.compile(
+    '<h1> Movies</h1>')
+    const render=(view, model)=>{
+        const ui=document.getElementById('ui')
+    const rendered=movieView({model})
+    ui.innerHTML=rendered
+    return ui;
+    }
+window.onload=()=>{
+
+    render(movieView)
+}
+window.onhashchange=()=>{
+    console.warn('hash change')
+}
+</script>
+    </head>
+    <body>
+        <div id="ui">
+
+        </div>
+        HELP
+    </body>
+</html>
